@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Medication_Name__c</columns>
+    <columns>Medication_Type__c</columns>
+    <columns>Trigger_Delay_in_Hours__c</columns>
+    <columns>Normal_Start_Day__c</columns>
+    <columns>Normal_End_Day__c</columns>
+    <columns>Dosage__c</columns>
+    <columns>Regime__c</columns>
+    <columns>Units__c</columns>
+    <columns>Packet_Size__c</columns>
+    <columns>Medication_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Cycle_Awaiting_Start_BIVF</fullName>
+    <columns>NAME</columns>
+    <columns>Cycle_Type_Name__c</columns>
+    <columns>Protocol__c</columns>
+    <columns>Clinic_Cycle_Being_Undertaken_at_Name__c</columns>
+    <columns>Treating_Doctor__c</columns>
+    <columns>Patient__c</columns>
+    <columns>Partner__c</columns>
+    <columns>Pricing_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Finalising Admission</value>
+    </filters>
+    <filters>
+        <field>Clinic_Cycle_Being_Undertaken_at_Name__c</field>
+        <operation>equals</operation>
+        <value>Ballarat IVF</value>
+    </filters>
+    <label>BIVF Cycles awaiting start</label>
+</ListView>

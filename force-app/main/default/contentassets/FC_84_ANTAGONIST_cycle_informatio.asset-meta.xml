@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>FC_84_ANTAGONIST_cycle_informatio</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>FC 8.4   ANTAGONIST cycle information.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

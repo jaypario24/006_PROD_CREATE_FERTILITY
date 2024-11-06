@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ballarat_Consents</fullName>
+    <columns>NAME</columns>
+    <columns>Clinic__c</columns>
+    <columns>Household_Related__c</columns>
+    <columns>Cycle_Related__c</columns>
+    <columns>Requires_Councillor__c</columns>
+    <columns>Patient_Related__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Clinic__c</field>
+        <operation>contains</operation>
+        <value>Ballarat</value>
+    </filters>
+    <label>Ballarat Consents</label>
+</ListView>

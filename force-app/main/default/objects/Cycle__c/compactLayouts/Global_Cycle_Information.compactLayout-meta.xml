@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Cycle_Information</fullName>
+    <fields>Name</fields>
+    <fields>Patient__c</fields>
+    <fields>Patient_ID__c</fields>
+    <fields>Age_Birthday_Treating_Doctor__c</fields>
+    <fields>Mobile__c</fields>
+    <fields>Patient_Address__c</fields>
+    <fields>Partner__c</fields>
+    <fields>Partner_ID__c</fields>
+    <fields>Partner_DOB__c</fields>
+    <fields>Partner_Mobile__c</fields>
+    <label>Global Cycle Information</label>
+</CompactLayout>

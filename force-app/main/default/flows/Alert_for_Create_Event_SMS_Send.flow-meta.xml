@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Copy_1_of_Send_SMS</name>
+        <label>Copy 1 of Send SMS</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <actionName>ClickSendSMS__ClickSendSMSGeneric</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>Confirmation</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.Linked_Patient_Donor__r.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ClickSendSMS__ClickSendSMSGeneric</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Send_SMS</name>
+        <label>Copy 2 of Send SMS</label>
+        <locationX>578</locationX>
+        <locationY>276</locationY>
+        <actionName>ClickSendSMS__ClickSendSMSGeneric</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>SMSReminder</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.Linked_Patient_Donor__r.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ClickSendSMS__ClickSendSMSGeneric</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_SMS</name>
+        <label>Send SMS</label>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
+        <actionName>ClickSendSMS__ClickSendSMSGeneric</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>SMSReminder</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.Linked_Patient_Donor__r.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ClickSendSMS__ClickSendSMSGeneric</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>TimeOnly</name>
+        <dataType>String</dataType>
+        <expression>TEXT(MOD( {!$Record.StartDateTime} - DATETIMEVALUE(&quot;1970-01-01 00:00:00&quot;), 1))</expression>
+    </formulas>
+    <interviewLabel>Alert for Create Event SMS Send {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Alert for Create Event SMS Send</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Interview_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Event</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Copy_1_of_Send_SMS</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Alert_Two_Days_Before</name>
+            <connector>
+                <targetReference>Send_SMS</targetReference>
+            </connector>
+            <label>Alert Two Days Before</label>
+            <offsetNumber>-2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>StartDateTime</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Alert_Two_Weeks_Before</name>
+            <connector>
+                <targetReference>Copy_2_of_Send_SMS</targetReference>
+            </connector>
+            <label>Alert Two Weeks Before</label>
+            <offsetNumber>-14</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>StartDateTime</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>Confirmation</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!$Record.Linked_Patient_Donor__r.FirstName},
+Confirming your appointment {!$Record.Interview_Type__c} appointment at Create Fertility on {!$Record.StartDateTime}
+Address is 359 Blackburn Road, Mount Waverley, VIC, 3149.
+Should you need to reschedule please contact us on 9873 6789.
+Warmest Regards,
+Create Fertility Concierge Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>SMSReminder</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!$Record.Linked_Patient_Donor__r.FirstName},
+This is a courtesy reminder of your {!$Record.Interview_Type__c} appointment at Create Fertility on {!$Record.StartDateTime}
+Address is 359 Blackburn Road, Mount Waverley, VIC, 3149.
+Should you need to reschedule please contact us on 9873 6789.
+Warmest Regards,
+Create Fertility Concierge Team</text>
+    </textTemplates>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>X34a_CF_OPERATIVE_TREATMENT_for_IVF</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>3.4a CF OPERATIVE TREATMENT for IVF consent Version 2.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

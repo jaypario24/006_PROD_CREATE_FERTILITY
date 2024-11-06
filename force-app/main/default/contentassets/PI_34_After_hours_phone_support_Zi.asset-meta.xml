@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>PI_34_After_hours_phone_support_Zi</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>PI 34. After hours phone support - Zigote.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

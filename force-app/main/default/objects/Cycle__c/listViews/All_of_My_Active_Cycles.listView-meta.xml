@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_of_My_Active_Cycles</fullName>
+    <columns>NAME</columns>
+    <columns>Patient__c</columns>
+    <columns>Cycle_Type_Name__c</columns>
+    <columns>Insemination_Method__c</columns>
+    <columns>How_Will_Semen_be_Collected__c</columns>
+    <columns>Day_1__c</columns>
+    <columns>Protocol__c</columns>
+    <columns>Cycle_Outcome__c</columns>
+    <columns>Pregnancy_Outcome__c</columns>
+    <columns>Estimated_Delivery_Date__c</columns>
+    <columns>Doctor_Initiating_Cycle_Name_Text__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Doctor_is_Me__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All of My Active Cycles</label>
+    <sharedTo>
+        <group>Ballarat_IVF_Doctors</group>
+        <group>Create_Fertility_Doctors</group>
+    </sharedTo>
+</ListView>

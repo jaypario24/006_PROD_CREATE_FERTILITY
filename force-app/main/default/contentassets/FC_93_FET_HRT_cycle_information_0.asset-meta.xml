@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>FC_93_FET_HRT_cycle_information_0</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>FC 9.3   FET HRT cycle information_0224.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

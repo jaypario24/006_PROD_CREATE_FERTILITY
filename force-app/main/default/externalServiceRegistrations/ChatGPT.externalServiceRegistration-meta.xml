@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ChatGPT</label>
+    <namedCredentialReference>ChatGPTAdmin</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>sendchatgptmessage</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;ChatGPT Integration&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+  },
+  &quot;consumes&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;produces&quot;: [
+    &quot;application/json&quot;
+  ],
+  &quot;parameters&quot;: {
+    &quot;model&quot;: {
+      &quot;name&quot;: &quot;model&quot;,
+      &quot;in&quot;: &quot;query&quot;,
+      &quot;description&quot;: &quot;The ID of the GPT model to use for generating text.&quot;,
+      &quot;required&quot;: true,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;prompt&quot;: {
+      &quot;name&quot;: &quot;prompt&quot;,
+      &quot;in&quot;: &quot;query&quot;,
+      &quot;description&quot;: &quot;The prompt to provide to the GPT model.&quot;,
+      &quot;required&quot;: true,
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;temperature&quot;: {
+      &quot;name&quot;: &quot;temperature&quot;,
+      &quot;in&quot;: &quot;query&quot;,
+      &quot;description&quot;: &quot;The temperature to use for generating text. Must be a float between 0 and 1.&quot;,
+      &quot;required&quot;: true,
+      &quot;type&quot;: &quot;number&quot;
+    },
+    &quot;max_tokens&quot;: {
+      &quot;name&quot;: &quot;max_tokens&quot;,
+      &quot;in&quot;: &quot;query&quot;,
+      &quot;description&quot;: &quot;The maximum number of tokens to generate for the response.&quot;,
+      &quot;required&quot;: true,
+      &quot;type&quot;: &quot;integer&quot;
+    }
+  },
+  &quot;paths&quot;: {
+    &quot;/completions&quot;: {
+      &quot;get&quot;: {
+        &quot;operationId&quot;: &quot;sendChatGPTMessage&quot;,
+        &quot;summary&quot;: &quot;Send a message to ChatGPT.&quot;,
+        &quot;parameters&quot;: [{
+            &quot;$ref&quot;: &quot;#/parameters/model&quot;
+          },
+          {
+            &quot;$ref&quot;: &quot;#/parameters/prompt&quot;
+          },
+          {
+            &quot;$ref&quot;: &quot;#/parameters/temperature&quot;
+          },
+          {
+            &quot;$ref&quot;: &quot;#/parameters/max_tokens&quot;
+          }
+        ],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Successful response.&quot;,
+            &quot;schema&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;properties&quot;: {
+                &quot;text&quot;: {
+                  &quot;type&quot;: &quot;string&quot;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  &quot;actions&quot;: {
+    &quot;sendChatGPTMessage&quot;: {
+      &quot;label&quot;: &quot;Send ChatGPT Message&quot;,
+      &quot;description&quot;: &quot;Send a message to ChatGPT and receive a response.&quot;,
+      &quot;invocation&quot;: {
+        &quot;type&quot;: &quot;request&quot;,
+        &quot;request&quot;: {
+          &quot;path&quot;: &quot;/v1/completions&quot;,
+          &quot;method&quot;: &quot;post&quot;,
+          &quot;headers&quot;: {
+            &quot;Content-Type&quot;: &quot;application/json&quot;,
+            &quot;Authorization&quot;: &quot;Bearer {{access_token}}&quot;
+          },
+          &quot;body&quot;: {
+            &quot;model&quot;: &quot;{{model}}&quot;,
+            &quot;prompt&quot;: &quot;{{prompt}}&quot;,
+            &quot;temperature&quot;: &quot;{{temperature}}&quot;,
+            &quot;max_tokens&quot;: &quot;{{max_tokens}}&quot;
+          }
+        }
+      },
+      &quot;outcomes&quot;: {
+        &quot;SUCCESS&quot;: {
+          &quot;if&quot;: &quot;not(empty(body.text))&quot;,
+          &quot;message&quot;: &quot;{{body.text}}&quot;
+        },
+        &quot;ERROR&quot;: {
+          &quot;if&quot;: &quot;not(empty(body.message))&quot;,
+          &quot;message&quot;: &quot;{{body.message}}&quot;
+        }
+      }
+    }
+  }
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <serviceBinding>{&quot;host&quot;:null,&quot;basePath&quot;:null,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[&quot;application/json&quot;],&quot;responseMediaTypes&quot;:[&quot;application/json&quot;],&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>4</systemVersion>
+</ExternalServiceRegistration>

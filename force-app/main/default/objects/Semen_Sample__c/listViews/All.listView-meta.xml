@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Patient_Donor__c</columns>
+    <columns>Patient_Donor_Date_of_Birth__c</columns>
+    <columns>Available_Straws__c</columns>
+    <columns>Storage_Date_Actual__c</columns>
+    <columns>Next_Billing_Date__c</columns>
+    <columns>Original_Storage_Expiry_Date__c</columns>
+    <columns>Storage_Extended_To__c</columns>
+    <columns>Storage_Location__c</columns>
+    <columns>Origin_of_Sample__c</columns>
+    <columns>Reserved_For__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Available_Straws__c</field>
+        <operation>notEqual</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Patient_Donor__c</field>
+        <operation>notContain</operation>
+        <value>test female</value>
+    </filters>
+    <filters>
+        <field>Reserved_For__c</field>
+        <operation>notContain</operation>
+        <value>Test household</value>
+    </filters>
+    <label>All</label>
+    <sharedTo>
+        <group>Create_Fertility_Lab</group>
+    </sharedTo>
+</ListView>

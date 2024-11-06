@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Reminder_Email</name>
+        <label>Send Reminder Email</label>
+        <locationX>176</locationX>
+        <locationY>360</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Patient_Donor__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>info@ballarativf.com.au</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Overdue Invoice</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>X30_days_after_dues</name>
+        <label>30 days after dues</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Create</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Clinic__r.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Create</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Create?</label>
+        </rules>
+        <rules>
+            <name>X30_Days_After_Due_Date</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Due_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Overdueby30Days</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Due_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Overdueby60Days</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Due_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Overdueby90</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Reminder_Email</targetReference>
+            </connector>
+            <label>30 Days After Due Date</label>
+        </rules>
+    </decisions>
+    <description>Follows up overdue invoices at 30, 60 and 90 days to the patient email address.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Overdueby30Days</name>
+        <dataType>Date</dataType>
+        <expression>{!$Flow.CurrentDate}+30</expression>
+    </formulas>
+    <formulas>
+        <name>Overdueby60Days</name>
+        <dataType>Date</dataType>
+        <expression>{!$Flow.CurrentDate}+60</expression>
+    </formulas>
+    <formulas>
+        <name>Overdueby90</name>
+        <dataType>Date</dataType>
+        <expression>{!$Flow.CurrentDate}+90</expression>
+    </formulas>
+    <interviewLabel>Auto Followup Email for Overdue Invoices {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Follow-up Email for Overdue Invoices</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>X30_days_after_dues</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Amount_Outstanding__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
+        <object>Invoice__c</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2022-12-16</startDate>
+            <startTime>16:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>EmailBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!$Record.Patient_Donor__r.FirstName},
+
+We are writing to you to let you know that {!$Record.Name} is overdue for payment. If you could please organise payment for this invoice by call us on {!$Record.Patient_Donor__r.Account.Household_Clinic__r.Phone__c} as soon as practicable we would appreciate it.
+Kind Regards,
+
+The admin team at {!$Record.Patient_Donor__r.Account.Household_Clinic__r.Name}.</text>
+    </textTemplates>
+</Flow>

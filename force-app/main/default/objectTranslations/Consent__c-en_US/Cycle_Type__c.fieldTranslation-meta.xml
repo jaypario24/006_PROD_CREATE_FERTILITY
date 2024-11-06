@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Consent Type --></label>
+    <name>Cycle_Type__c</name>
+    <picklistValues>
+        <masterLabel>Counsellor&apos;s Report (Manual Upload)</masterLabel>
+        <translation><!-- Counsellor&apos;s Report (Manual Upload) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cycle/Operative Consent</masterLabel>
+        <translation><!-- Cycle/Operative Consent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Consent</masterLabel>
+        <translation><!-- Financial Consent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Principal Consent</masterLabel>
+        <translation><!-- Principal Consent --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

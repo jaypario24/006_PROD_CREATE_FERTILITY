@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Results</value>
+    </caseValues>
+    <quickActions>
+        <label><!-- New To Do --></label>
+        <name>New_To_Do</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Email --></label>
+        <name>Send_Email</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Antral Follicle Count --></label>
+        <name>Antral_Follicle_Count</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Blood Test --></label>
+        <name>Blood_Test</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Follicular Scan --></label>
+        <name>Follicular_Sacn</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ART Screen --></label>
+        <name>Infectious_Screen</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PRP Scan --></label>
+        <name>PRP_Scan</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre-Conception Pathology --></label>
+        <name>Pre_Conception_Pathology</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pregnancy Scan --></label>
+        <name>Pregnancy_Scan</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pregnancy Test --></label>
+        <name>Pregnancy_Test</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prepair Bloods --></label>
+        <name>Prepair_Bloods</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Recurrent Implantation Failure --></label>
+        <name>Recurrent_Implantation_Failure</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Scan --></label>
+        <name>Scan</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Semen Analysis --></label>
+        <name>Semen_Analysis</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Testicular Work Up/Unexplained Oligospermia --></label>
+        <name>Testicular_Work_Up_Unexplained_Oligospermia</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Thrombophilia Screening --></label>
+        <name>Thrombophilia_Screening</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

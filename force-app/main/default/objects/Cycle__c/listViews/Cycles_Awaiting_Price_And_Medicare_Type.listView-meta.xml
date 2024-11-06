@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cycles_Awaiting_Price_And_Medicare_Type</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Patient__c</columns>
+    <columns>Clinic_Cycle_Being_Undertaken_At__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Day_1__c</columns>
+    <columns>Cycle_Outcome__c</columns>
+    <columns>Protocol__c</columns>
+    <columns>Doctor_Initiating_Cycle_Name_Text__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Pricing_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Medicare_Claimable__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Cycles Awaiting Price And Medicare Type</label>
+    <sharedTo>
+        <group>Ballarat_IVF_Admin</group>
+        <group>Create_Fertility_Admin</group>
+    </sharedTo>
+</ListView>

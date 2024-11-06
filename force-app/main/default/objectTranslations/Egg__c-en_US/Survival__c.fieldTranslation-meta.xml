@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Survival --></label>
+    <name>Survival__c</name>
+    <picklistValues>
+        <masterLabel>Deg</masterLabel>
+        <translation><!-- Deg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MI</masterLabel>
+        <translation><!-- MI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MII</masterLabel>
+        <translation><!-- MII --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RZ</masterLabel>
+        <translation><!-- RZ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

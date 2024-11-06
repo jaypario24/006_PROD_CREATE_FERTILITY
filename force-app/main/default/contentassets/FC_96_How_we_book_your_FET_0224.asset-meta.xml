@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>FC_96_How_we_book_your_FET_0224</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>FC 9.6  How we book your FET_0224.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

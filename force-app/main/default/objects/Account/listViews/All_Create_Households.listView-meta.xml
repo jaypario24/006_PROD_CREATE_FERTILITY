@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Create_Households</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Household_Doctor__c</columns>
+    <columns>Household_Clinic__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Household_Clinic__c</field>
+        <operation>contains</operation>
+        <value>Create</value>
+    </filters>
+    <label>All Create Households</label>
+    <sharedTo>
+        <group>Create_Fertility</group>
+    </sharedTo>
+</ListView>

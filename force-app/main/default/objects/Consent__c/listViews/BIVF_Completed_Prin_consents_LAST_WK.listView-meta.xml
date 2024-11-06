@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BIVF_Completed_Prin_consents_LAST_WK</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Patient_Donor__c</columns>
+    <columns>Valid_Consent__c</columns>
+    <columns>Doctor_Staff_Member_to_Sign_Document__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Consent_Attached__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Consent_Signed__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Owner_Clinic_Name__c</field>
+        <operation>contains</operation>
+        <value>Ballarat IVF</value>
+    </filters>
+    <filters>
+        <field>Cycle_Type__c</field>
+        <operation>equals</operation>
+        <value>Principal Consents</value>
+    </filters>
+    <filters>
+        <field>Doctor_Staff_Member_to_Sign_Document__c</field>
+        <operation>contains</operation>
+        <value>Dalton,Bardsley,Beseler</value>
+    </filters>
+    <label>BIVF Completed Prin consents LAST WK</label>
+</ListView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BIVF_To_Do_Scans</fullName>
+    <columns>NAME</columns>
+    <columns>Patient__c</columns>
+    <columns>Result_Date_and_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Result__c.Follicular_Sacn,Result__c.Pregnancy_Scan,Result__c.Scan</value>
+    </filters>
+    <filters>
+        <field>Results_Acknowledged__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Result_Clinic__c</field>
+        <operation>contains</operation>
+        <value>Ballarat</value>
+    </filters>
+    <label>BIVF To Do Scans</label>
+</ListView>

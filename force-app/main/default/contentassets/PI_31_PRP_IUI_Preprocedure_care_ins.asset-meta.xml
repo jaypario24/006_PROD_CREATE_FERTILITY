@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>PI_31_PRP_IUI_Preprocedure_care_ins</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>PI 31. PRP IUI Pre-procedure care instructions -  - Copy.docx</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Produced Location --></label>
+    <name>Produced_Location__c</name>
+    <picklistValues>
+        <masterLabel>Ararat</masterLabel>
+        <translation><!-- Ararat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BDPC</masterLabel>
+        <translation><!-- BDPC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Epworth</masterLabel>
+        <translation><!-- Epworth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MDHS</masterLabel>
+        <translation><!-- MDHS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offsite</masterLabel>
+        <translation><!-- Offsite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WPH</masterLabel>
+        <translation><!-- WPH --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

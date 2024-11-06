@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR_END_DT__c</fullName>
+    <description>The end of a pregnancy includes delivery, miscarriage or termination. 
+
+If it is known that the pregnancy ended, but the exact pregnancy end date is
+unknown, please enter an approximate date in PR_END_DT and note
+“PR_END_DT approximated” in the COMMENT field along with any other
+information.
+Where multiple births occur over more than one date, record the date of the first
+born baby.
+If there was no clinical pregnancy, leave this data item blank</description>
+    <externalId>false</externalId>
+    <label>PR_END_DT</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

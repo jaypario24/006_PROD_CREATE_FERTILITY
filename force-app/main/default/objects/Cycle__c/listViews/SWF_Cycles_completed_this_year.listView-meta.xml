@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWF_Cycles_completed_this_year</fullName>
+    <columns>NAME</columns>
+    <columns>Cycle_Type_Name__c</columns>
+    <columns>Protocol__c</columns>
+    <columns>Clinic_Cycle_Being_Undertaken_at_Name__c</columns>
+    <columns>Treating_Doctor__c</columns>
+    <columns>Patient__c</columns>
+    <columns>Partner__c</columns>
+    <columns>Pricing_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Finalising Admission,Closed</value>
+    </filters>
+    <filters>
+        <field>Cycle_Outcome__c</field>
+        <operation>equals</operation>
+        <value>Cycle Cancelled,Freeze All,No Transfer,Not Pregnant,Positive BHCG,Clinical Pregnancy,Live Birth,No Eggs Retrieved</value>
+    </filters>
+    <filters>
+        <field>Protocol__c</field>
+        <operation>equals</operation>
+        <value>Antagonist,Pill Antagonist,Boost,Natural,HRT,Down Reg,FSH,Luteal Phase,Duostim #1 Antagonist,Duostim #1 Down Regulation,Duostim #1 Flare/Boost,Duostim #2  Antagoinist,Custom,Letrozole,Ministim</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2024 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Clinic_Cycle_Being_Undertaken_at_Name__c</field>
+        <operation>contains</operation>
+        <value>Ballarat IVF</value>
+    </filters>
+    <filters>
+        <field>Treating_Doctor__c</field>
+        <operation>contains</operation>
+        <value>Kristin Cornell</value>
+    </filters>
+    <label>SWF Cycles completed this year</label>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claims_Awaiting_Finalisation</fullName>
+    <columns>NAME</columns>
+    <columns>Patient_Donor__c</columns>
+    <columns>Cycle__c</columns>
+    <columns>Claim_Type__c</columns>
+    <columns>Total_Claim_Value__c</columns>
+    <columns>Finalised_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Claim_Finalised__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Claims Awaiting Finalisation</label>
+    <sharedTo>
+        <group>Ballarat_IVF_Admin</group>
+        <group>Create_Fertility_Admin</group>
+    </sharedTo>
+</ListView>

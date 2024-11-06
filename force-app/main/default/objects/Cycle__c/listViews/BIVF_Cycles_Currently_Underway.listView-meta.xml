@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BIVF_Cycles_Currently_Underway</fullName>
+    <columns>NAME</columns>
+    <columns>Patient__c</columns>
+    <columns>Clinic_Cycle_Being_Undertaken_At__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Day_1__c</columns>
+    <columns>Cycle_Outcome__c</columns>
+    <columns>Protocol__c</columns>
+    <columns>Doctor_Initiating_Cycle_Name_Text__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>In Cycle</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Cycle__c.Duo_Stim,Cycle__c.Egg_Freeze_Cycle,Cycle__c.FET_Cycle,Cycle__c.Fresh_Egg_Donor_Cycle,Cycle__c.IUI_Cycle,Cycle__c.IVF_Cycle,Cycle__c.Lab_Only_Cycle,Cycle__c.OI_Cycle,Cycle__c.VOT_Cycle</value>
+    </filters>
+    <filters>
+        <field>Day_1__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Clinic_Cycle_Being_Undertaken_at_Name__c</field>
+        <operation>contains</operation>
+        <value>Ballarat</value>
+    </filters>
+    <label>BIVF Cycles Currently Underway</label>
+</ListView>

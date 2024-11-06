@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scan_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Scan Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AFC</fullName>
+                <default>false</default>
+                <label>AFC</label>
+            </value>
+            <value>
+                <fullName>Stimulation Scan</fullName>
+                <default>false</default>
+                <label>Stimulation Scan</label>
+            </value>
+            <value>
+                <fullName>FET Scan</fullName>
+                <default>false</default>
+                <label>FET Scan</label>
+            </value>
+            <value>
+                <fullName>IUI Scan</fullName>
+                <default>false</default>
+                <label>IUI Scan</label>
+            </value>
+            <value>
+                <fullName>Down Regulation Scan</fullName>
+                <default>false</default>
+                <label>Down Regulation Scan</label>
+            </value>
+            <value>
+                <fullName>Pregnancy Scan</fullName>
+                <default>false</default>
+                <label>Pregnancy Scan</label>
+            </value>
+            <value>
+                <fullName>Follicle Scan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Follicle Scan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

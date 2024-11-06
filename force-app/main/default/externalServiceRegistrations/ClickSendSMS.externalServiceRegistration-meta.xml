@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ClickSendSMS</label>
+    <namedCredentialReference>ClickSend</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>postsmssend</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;info&quot;: {
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;title&quot;: &quot;SMS API&quot;
+  },
+  &quot;host&quot;: &quot;rest.clicksend.com&quot;,
+  &quot;basePath&quot;: &quot;/v3&quot;,
+  &quot;schemes&quot;: [&quot;https&quot;],
+  &quot;paths&quot;: {
+    &quot;/sms/send&quot;: {
+      &quot;post&quot;: {
+        &quot;summary&quot;: &quot;Send SMS messages&quot;,
+        &quot;description&quot;: &quot;Use this endpoint to send SMS messages to multiple recipients.&quot;,
+        &quot;consumes&quot;: [&quot;application/json&quot;],
+        &quot;parameters&quot;: [{
+          &quot;name&quot;: &quot;body&quot;,
+          &quot;in&quot;: &quot;body&quot;,
+          &quot;required&quot;: true,
+          &quot;description&quot;: &quot;The messages to send&quot;,
+          &quot;schema&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;messages&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                  &quot;type&quot;: &quot;object&quot;,
+                  &quot;properties&quot;: {
+                    &quot;to&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;source&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;body&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    }
+                  },
+                  &quot;required&quot;: [&quot;to&quot;, &quot;source&quot;, &quot;body&quot;]
+                }
+              }
+            },
+            &quot;required&quot;: [&quot;messages&quot;]
+          }
+        }],
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Successful Response&quot;,
+            &quot;schema&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;properties&quot;: {
+                &quot;http_code&quot;: {
+                  &quot;type&quot;: &quot;integer&quot;
+                },
+                &quot;response_code&quot;: {
+                  &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;response_msg&quot;: {
+                  &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;data&quot;: {
+                  &quot;type&quot;: &quot;object&quot;
+                }
+              },
+              &quot;required&quot;: [&quot;http_code&quot;, &quot;response_code&quot;, &quot;response_msg&quot;, &quot;data&quot;]
+            }
+          }
+        },
+        &quot;security&quot;: [{
+          &quot;basicAuth&quot;: []
+        }]
+      }
+    }
+  },
+  &quot;securityDefinitions&quot;: {
+    &quot;basicAuth&quot;: {
+      &quot;type&quot;: &quot;basic&quot;
+    }
+  }
+}</schema>
+    <schemaType>OpenApi</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;rest.clicksend.com&quot;,&quot;basePath&quot;:&quot;/v3&quot;,&quot;allowedSchemes&quot;:[&quot;HTTPS&quot;],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>4</systemVersion>
+</ExternalServiceRegistration>

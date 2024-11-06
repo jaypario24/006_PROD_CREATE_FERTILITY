@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>TM_IVF_Graduation_of_care_Congratu2</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>TM - IVF Graduation of care Congratulations slip (4)-min (2).png</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

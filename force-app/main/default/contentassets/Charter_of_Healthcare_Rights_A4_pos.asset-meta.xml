@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>Charter_of_Healthcare_Rights_A4_pos</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>Charter of Healthcare Rights A4 poster ACCESSIBLE pdf.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

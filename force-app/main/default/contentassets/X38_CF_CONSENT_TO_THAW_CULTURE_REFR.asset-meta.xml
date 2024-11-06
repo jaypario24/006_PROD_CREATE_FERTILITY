@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>X38_CF_CONSENT_TO_THAW_CULTURE_REFR</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>3.8 CF CONSENT TO THAW, CULTURE &amp; RE-FREEZE OF STORED EMBRYOS- Version 4.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

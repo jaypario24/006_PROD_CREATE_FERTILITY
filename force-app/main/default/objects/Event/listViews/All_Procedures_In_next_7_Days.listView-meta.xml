@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Procedures_In_next_7_Days</fullName>
+    <columns>START_DATE_TIME</columns>
+    <columns>SUBJECT</columns>
+    <columns>WHO_NAME</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>Anaesthetist_Name__c</columns>
+    <columns>BMI__c</columns>
+    <columns>Medicare_Details__c</columns>
+    <columns>Clinic__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DUE_DATE</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:7</value>
+    </filters>
+    <filters>
+        <field>Procedure_Type__c</field>
+        <operation>equals</operation>
+        <value>OPU,Transfer,IUI,PRP,Filgrastim,Egg Thaw - VOT,PESA,TESA</value>
+    </filters>
+    <label>All Procedures In Next 7 Days</label>
+</ListView>

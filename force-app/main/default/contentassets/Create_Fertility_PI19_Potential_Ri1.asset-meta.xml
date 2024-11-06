@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>Create_Fertility_PI19_Potential_Ri1</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>Create Fertility PI-19 - Potential Risks with ART version 3.docx</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

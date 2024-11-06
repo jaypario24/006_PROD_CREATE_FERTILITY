@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cycle_Consent</fullName>
+    <active>true</active>
+    <label>Cycle Consent</label>
+    <picklistValues>
+        <picklist>Cycle_Type__c</picklist>
+        <values>
+            <fullName>Cycle Consent</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Disposal Consent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal Consents</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

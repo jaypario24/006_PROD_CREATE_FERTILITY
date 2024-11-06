@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Anzard_Issue_Unknow_Cycle_Type</fullName>
+        <description>Anzard Issue Unknow Cycle Type</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Ballarat_IVF_Lab</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>BallaratIVFLab/Alert_FET_ANZARD_Issue_1682037140455</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Outstanding_Invoice_Day_1_Ballarat</fullName>
+        <description>Email Alert Outstanding Invoice Day 1 Ballarat</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Ballarat_IVF_Admin</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Outstanding_Invoice_1683082234439</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Outstanding_Invoice_Day_1_Create</fullName>
+        <description>Email Alert Outstanding Invoice Day 1 Create</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Create_Fertility_Admin</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Outstanding_Invoice_1683082234439</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_on_Insem_Chnage</fullName>
+        <description>Email on Insem Chnage</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Create_Fertility_Lab</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>Create_Fertility_Nursing</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>DeveloperTemplates/Alert_Email_For_Insem_Chnage_1722209770864</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Cycle_Created_Create_Nursing_Alert</fullName>
+        <description>New Cycle Created Create Nursing Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Create_Fertility_Nursing</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>DeveloperTemplates/New_Cycle_Order_1683513615043</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Freeze_All_Alert</fullName>
+        <description>New Freeze All Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Create_Fertility_Admin</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>Create_Fertility_Lab</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>Create_Fertility_Nursing</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>DeveloperTemplates/Freeze_All_Alert_1686897704074</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowDefinition>Create_ANZARD_and_Day_1_Data_for_Fresh_Egg_Donor_Cycle</flowDefinition>
+    <label>Create ANZARD and Day 1 Data</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

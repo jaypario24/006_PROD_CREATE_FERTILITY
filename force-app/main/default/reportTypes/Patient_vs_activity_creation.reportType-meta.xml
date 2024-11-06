@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Contact</baseObject>
+    <category>accounts</category>
+    <deployed>true</deployed>
+    <description>Patient vs activity creation</description>
+    <label>Patient vs activity creation</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Patient_ID_Display_Formula__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Which_Clinic_was_Donation_Made_at__c</field>
+            <table>Contact</table>
+        </columns>
+        <masterLabel>Patient</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Imported__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Deceased__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Date_of_Death__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Inactive_Do_Not_Contact__c</field>
+            <table>Contact</table>
+        </columns>
+        <masterLabel>Patients &amp; Donors</masterLabel>
+    </sections>
+</ReportType>

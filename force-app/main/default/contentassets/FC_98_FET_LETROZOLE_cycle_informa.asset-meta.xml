@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>true</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>FC_98_FET_LETROZOLE_cycle_informa</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>FC 9.8   FET LETROZOLE cycle information_0224.pdf</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

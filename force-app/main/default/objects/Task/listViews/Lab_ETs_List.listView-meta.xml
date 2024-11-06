@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lab_ETs_List</fullName>
+    <columns>WHO_NAME</columns>
+    <columns>Procedure_Type__c</columns>
+    <columns>Procedure_Name__c</columns>
+    <columns>STATUS</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Procedure_Name__c</field>
+        <operation>equals</operation>
+        <value>today</value>
+    </filters>
+    <label>Lab ETs List</label>
+    <sharedTo>
+        <group>Create_Fertility_Lab</group>
+        <group>Create_Fertility_Nursing</group>
+    </sharedTo>
+</ListView>
